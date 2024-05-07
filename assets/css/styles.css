@@ -28,7 +28,8 @@ h1 {
     box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
 }
 .card-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     margin-top: 55px;
 }
@@ -212,6 +213,20 @@ header {
     background: transparent;
     cursor: pointer;
 }
+.hero-wrap .action .div-icon {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+}
+.hero-wrap .action .icon {
+    width: 10px;
+    color: #ffb900;
+}
 .hero-wrap .action img {
     left: 0;
     margin-left: 28px;
@@ -264,7 +279,8 @@ header {
     line-height: 1.67; /* 166.667% */
 }
 .row-bot .card-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     margin-top: 55px;
 }

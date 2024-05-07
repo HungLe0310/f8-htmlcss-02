@@ -7,6 +7,8 @@
         <!-- Styles Css -->
 
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <!-- responsive -->
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
 
         <!-- Fonts -->
         <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
@@ -91,10 +93,23 @@
     </head>
     <body>
         <header>
+            <!-- PC header -->
             <!-- Navbar -->
             <div class="nav-sticky">
                 <div class="content">
                     <div class="navbar">
+                        <label class="toggle-menu" for="header-mobile"
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"
+                            >
+                                <path
+                                    fill="currentColor"
+                                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                                />
+                            </svg>
+                        </label>
+
                         <a href="/">
                             <img
                                 class="logo"
@@ -112,6 +127,37 @@
                     </div>
                 </div>
             </div>
+            <!-- Tablet & mobile header -->
+            <header class="header-mobile">
+                <input
+                    hidden
+                    class="menu-input"
+                    type="checkbox"
+                    name="header-mobile"
+                    id="header-mobile"
+                />
+                <!-- overlay -->
+                <label for="header-mobile" class="menu-overlay"></label>
+                <div class="menu-content">
+                    <!-- Logo -->
+                    <a href="/">
+                        <img
+                            class="logo"
+                            src="./assets/img/logo.svg"
+                            alt="Lesson."
+                        />
+                    </a>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#course">Courses</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#review">Reviews</a></li>
+                        <li class="show-in-mobile separate">
+                            <a href="#!">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
         </header>
         <!-- Hero   -->
         <main>
@@ -177,11 +223,20 @@
                             <div class="action">
                                 <div class="btn">See Courses</div>
                                 <button class="video">
-                                    <a href="#!"
-                                        ><img
-                                            src="./assets/img/video.svg"
-                                            alt="Watch Video"
-                                    /></a>
+                                    <div class="div-icon">
+                                        <svg
+                                            class="icon"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 384 512"
+                                        >
+                                            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path
+                                                fill="currentColor"
+                                                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
+                                            />
+                                        </svg>
+                                    </div>
+
                                     <span>Watch Video</span>
                                 </button>
                             </div>
@@ -389,7 +444,9 @@
                                 personalized and more recommendations from the
                                 full Coursera catalog.
                             </p>
-                            <div class="btn">Join Now</div>
+                            <div class="div-btn">
+                                <div class="btn">Join Now</div>
+                            </div>
                         </div>
                         <image>
                             <img
